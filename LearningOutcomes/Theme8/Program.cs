@@ -22,7 +22,7 @@ namespace Theme8
             int B = int.Parse(inputB);
 
             int resultSum = Sum(A,B);
-            int resultAve = Ave(A, B, resultSum);
+            float resultAve = Ave(A, B, resultSum);
 
             Console.WriteLine("和は" + resultSum + "で、平均は" + resultAve + "です。");
             Console.ReadLine();
@@ -34,10 +34,10 @@ namespace Theme8
             return resultSum;
         }
 
-        public static int Ave(int A, int B,int resultSum)
+        public static float Ave(int A, int B,int resultSum)
         {
-            
-            int resultAve = resultSum / 2;
+            float result = float.Parse(resultSum.ToString());
+            float resultAve = result / 2;
             return resultAve;
         }
     }
