@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme7", "Theme7\Theme7.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme8", "Theme8\Theme8.csproj", "{6BFF244E-9533-4992-B561-69D311E59B09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme9", "Theme9\Theme9.csproj", "{47B8F80C-A938-4746-8259-E381AB5FC008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Theme10", "Theme10\Theme10.csproj", "{7195D16E-B835-48DF-AE5D-B21A3DA4A12C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{6BFF244E-9533-4992-B561-69D311E59B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BFF244E-9533-4992-B561-69D311E59B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BFF244E-9533-4992-B561-69D311E59B09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47B8F80C-A938-4746-8259-E381AB5FC008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47B8F80C-A938-4746-8259-E381AB5FC008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47B8F80C-A938-4746-8259-E381AB5FC008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47B8F80C-A938-4746-8259-E381AB5FC008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7195D16E-B835-48DF-AE5D-B21A3DA4A12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7195D16E-B835-48DF-AE5D-B21A3DA4A12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7195D16E-B835-48DF-AE5D-B21A3DA4A12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7195D16E-B835-48DF-AE5D-B21A3DA4A12C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
