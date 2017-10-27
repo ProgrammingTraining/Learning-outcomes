@@ -10,35 +10,42 @@ namespace Theme10
     {
         static void Main(string[] args)
         {
-            string choice = "initialValue";
+            string choice = string.Empty;
 
             Console.Write("Enterを入力して、おみくじを引きましょう。");
-            string firstChoice = Console.ReadLine();
-            choice = Fortune(choice, firstChoice);
+            Console.ReadLine();
+            Fortune();
 
-            if (choice == "1")
+            bool again = true;
+            while (again == true)
             {
-                Fortune(choice, firstChoice);
-            }
-        }
-        public static string Fortune( string choice, string firstChoice)
-        {
-            if (firstChoice == "" || choice == "1")
-            {
-                string[] lot = new string[] { "大吉", "中吉", "吉", "小吉", "末吉", "凶", "大凶" };
-
-                int max = lot.Length - 1; //配列の長さ → 7-1=6
-
-                Random cRandom = new System.Random();
-                int n = cRandom.Next(max);
-
-                string result = lot[n]; //配列のn番目の要素は？
-                Console.WriteLine("運勢：" + result);
-
                 Console.Write("もう一度しますか（1・・・はい、2・・・いいえ）：");
                 choice = Console.ReadLine();
+                if (choice == "1")
+                {
+                    Fortune();
+                }
+                else if (choice == "2")
+                {
+                    again = false;
+                }
+                else
+                {
+                    Console.WriteLine("もう一度入力してください。");
+                }
             }
-            return choice;
+        }
+        public static void Fortune()
+        {
+            string[] lot = new string[] { "大吉", "中吉", "吉", "小吉", "末吉", "凶", "大凶" };
+
+            int max = lot.Length - 1; //配列の長さ → 7-1=6
+
+            Random cRandom = new System.Random();
+            int n = cRandom.Next(max);
+
+            string result = lot[n]; //配列のn番目の要素は？
+            Console.WriteLine("運勢：" + result);
         }
     }
 }
