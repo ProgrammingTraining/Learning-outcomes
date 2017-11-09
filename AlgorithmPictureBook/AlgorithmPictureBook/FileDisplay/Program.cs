@@ -12,7 +12,7 @@ namespace FileDisplay
         static void Main(string[] args)
         {
             int i = 1;
-            string fileName = @"../../abc.txt";
+            string fileName = @"../abc.txt";
 
             if (File.Exists(fileName))
             {
