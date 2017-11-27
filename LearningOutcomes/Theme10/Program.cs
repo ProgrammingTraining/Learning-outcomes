@@ -39,7 +39,7 @@ namespace Theme10
         {
             string[] lot = new string[] { "大吉", "中吉", "吉", "小吉", "末吉", "凶", "大凶" };
 
-            int max = lot.Length - 1; //配列の長さ → 7-1=6
+            int max = lot.Length-1; //配列の長さ → 7-1=6
 
             Random cRandom = new System.Random();
             int n = cRandom.Next(max);
