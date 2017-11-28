@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TossingCoin", "TossingCoin\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lineedit", "lineedit\lineedit.csproj", "{9E828F9F-3A98-4301-A3A3-6DE7333BBF81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbers", "PrimeNumbers\PrimeNumbers.csproj", "{53CDB7CB-8915-4718-B859-80B6150C5332}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9E828F9F-3A98-4301-A3A3-6DE7333BBF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E828F9F-3A98-4301-A3A3-6DE7333BBF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E828F9F-3A98-4301-A3A3-6DE7333BBF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CDB7CB-8915-4718-B859-80B6150C5332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CDB7CB-8915-4718-B859-80B6150C5332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CDB7CB-8915-4718-B859-80B6150C5332}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CDB7CB-8915-4718-B859-80B6150C5332}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
