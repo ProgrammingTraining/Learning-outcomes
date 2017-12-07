@@ -10,23 +10,23 @@ namespace PrimeNumbers
     {
         static void Main(string[] args)
         {
-            int MaxValue = 50;//最大値
-            int[] resultArray = new int[MaxValue + 1];
+            int maxValue = 50;//最大値
+            int[] resultArray = new int[maxValue + 1];
             int i,j;
 
-            for (i = 2; i <= MaxValue; i++)//配列の初期化。すべてに0を格納
+            for (i = 2; i <= maxValue; i++)//配列の初期化。すべてに0を格納
             {
                 resultArray[i] = 0;
             }
 
-            for (i = 2; i <= 10; i++)//2~10が素数かチェック。
+            for (i = 2; i <= maxValue; i++)//2~MaxValueが素数かチェック。
             {
                 if (resultArray[i] == 0)
                 {
-                    for (j = 2; j <= MaxValue; j++)
+                    for (j = 2; j <= maxValue; j++)
                     {
                         int result = i * j;
-                        if (result <= MaxValue)//iの倍数が10以内にあればresultArray[] = 1
+                        if (result <= maxValue)//iの倍数がMaxValue以内にあればresultArray[] = 1
                         {
                             resultArray[result] = 1;
                         }
@@ -34,7 +34,7 @@ namespace PrimeNumbers
                 }
             }
 
-            for  (i = 2; i <= MaxValue; i++)
+            for  (i = 2; i <= maxValue; i++)
             {
                 if (resultArray[i] == 0)//もし配列の中身が0なら表示
                 {

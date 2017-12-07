@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lineedit", "lineedit\lineed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbers", "PrimeNumbers\PrimeNumbers.csproj", "{53CDB7CB-8915-4718-B859-80B6150C5332}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeFactor", "PrimeFactor\PrimeFactor.csproj", "{018DF53C-63EB-48AA-B798-F00D6BC1F85C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuclideanAlgorithm", "EuclideanAlgorithm\EuclideanAlgorithm.csproj", "{C4A45551-DBF2-4859-AF23-9742779A630F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{53CDB7CB-8915-4718-B859-80B6150C5332}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53CDB7CB-8915-4718-B859-80B6150C5332}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53CDB7CB-8915-4718-B859-80B6150C5332}.Release|Any CPU.Build.0 = Release|Any CPU
+		{018DF53C-63EB-48AA-B798-F00D6BC1F85C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{018DF53C-63EB-48AA-B798-F00D6BC1F85C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{018DF53C-63EB-48AA-B798-F00D6BC1F85C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{018DF53C-63EB-48AA-B798-F00D6BC1F85C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A45551-DBF2-4859-AF23-9742779A630F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A45551-DBF2-4859-AF23-9742779A630F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A45551-DBF2-4859-AF23-9742779A630F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A45551-DBF2-4859-AF23-9742779A630F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
