@@ -8,12 +8,12 @@ namespace PrimeFactor
 {
     class Program
     {
-        static int maxValue=100;
+        
         static void Main(string[] args)
         {
             Console.Write("素因数分解する数を入力してください。:");
             string inputNumber = Console.ReadLine();
-            maxValue = int.Parse(inputNumber);
+            int maxValue = int.Parse(inputNumber);
 
             int[] primeList = PrimeNumber(maxValue);//素数の計算
             int i = 0;
