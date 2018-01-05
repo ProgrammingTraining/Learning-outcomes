@@ -31,7 +31,16 @@ namespace List3_1
             int ky = int.Parse(stky);
 
             //配列xから値がkyである要素を線形探索
-            search(x, nx, ky);
+            int idx = search(x, nx, ky);
+
+            if (idx == -1)
+            {
+                Console.WriteLine("探索に失敗しました。");
+            }
+            else
+            {
+                Console.WriteLine("{0}はx[{1}]にあります。", ky, idx);
+            }
 
             Console.ReadLine();
         }
@@ -51,20 +60,20 @@ namespace List3_1
         /// <summary>
         /// 要素数nxの配列xからkyと一致する要素を線形探索
         /// </summary>
-        static void search(int[] x , int nx, int ky)
+        static int search(int[] x , int nx, int ky)
         {
-            for(int i = 0; i <= nx; i++)
+            int i = 0;
+            while(true)
             {
                 if (i == nx)
                 {
-                    Console.WriteLine("探索に失敗しました。");//探索失敗
-                    break;
+                    return -1;//探索失敗
                 }
                 if (x[i] == ky)
                 {
-                    Console.WriteLine("{0}はx[{1}]にあります。", ky, i);//探索成功
-                    break;
+                    return i;//探索成功
                 }
+                i++;
             }
         }
     }
