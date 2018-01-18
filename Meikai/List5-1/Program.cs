@@ -16,7 +16,7 @@ namespace List5_1
             }
             else
             {
-                return 1;
+                return 1;//1じゃないと計算できないよ！1のままなら自然数じゃないよ！
             }
         }
         static int Main(string[] args)
