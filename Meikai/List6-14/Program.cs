@@ -8,51 +8,66 @@ namespace List6_14
 {
     class Program
     {
-        static int[] mergebefore(int[] b)
+        static int[] mergemerge(int[] e)
         {
             Console.WriteLine("配列を前半と後半に分割します。");
-            int half = b.Length / 2;
-            int[] b1 = new int[half];
-            int[] b2 = new int[half + 1];
+            int half = e.Length / 2;
+            int afterMax;
+            if (e.Length % 2 == 1)//奇数
+            {
+                afterMax = half + 1 ;
+            }
+            else
+            {
+                afterMax = half;
+            }
 
+            int[] before = new int[half];
+            int[] after = new int[afterMax];
+
+
+            Console.WriteLine("mergemerge前半");
             for (int i = 0; i < half; i++)
             {
-                b1[i] = b[i];
+                before[i] = e[i];
             }
             //前半の中身を表示
-            Console.WriteLine("mergemerge前半");
-            for (int i = 0; i < b1.Length; i++)
+            for (int i = 0; i < before.Length; i++)
             {
-                Console.WriteLine("b1[{0}]:{1}", i, b1[i]);
+                Console.WriteLine("before[{0}]:{1}", i, before[i]);
             }
-            if (b1.Length != 1)
+            if (before.Length != 1)
             {
-                mergebefore(b1);
+                before = mergemerge(before);
             }
 
+            Console.WriteLine("mergemerge後半");
             int j = half;
-            for (int i = 0; i < half + 1; i++)
+            for (int i = 0; i < afterMax; i++)
             {
-                b2[i] = b[j];
+                after[i] = e[j];
                 j++;
             }
             //後半の中身を表示
-            Console.WriteLine("mergemerge後半");
-            for (int i = 0; i < b2.Length; i++)
+            for (int i = 0; i < after.Length; i++)
             {
-                Console.WriteLine("b2[{0}]:{1}", i, b2[i]);
+                Console.WriteLine("after[{0}]:{1}", i, after[i]);
+            }
+            if (after.Length != 1)
+            {
+                after = mergemerge(after);
             }
 
-            Console.WriteLine("前半配列b1と後半配列b2を配列b3にソートして格納します。");
-            int[] b3 = new int[b1.Length + b2.Length];
+            Console.WriteLine("前半配列beforeと後半配列afterを配列fにソートして格納します。");
+            int[] f = new int[before.Length + after.Length];
             int pb = 0;
             int pc = 0;
             int pd = 0;
 
-            while (pb < b1.Length && pc < b2.Length)
+            while (pb < before.Length && pc < after.Length)
             {
-                b3[pd] = (b1[pb] <= b2[pc]) ? b1[pb] : b2[pc];
-                if (b1[pb] <= b2[pc])
+                f[pd] = (before[pb] <= after[pc]) ? before[pb] : after[pc];
+                if (before[pb] <= after[pc])
                 {
                     pb++;
                 }
@@ -64,99 +79,25 @@ namespace List6_14
             }
 
             //比較対象のない残り物の格納
-            while (pb < b1.Length)//配列cをすべて配列dに格納している＆配列bに未格納がある場合
+            while (pb < before.Length)//配列cをすべて配列dに格納している＆配列bに未格納がある場合
             {
-                b3[pd++] = b1[pb++];
+                f[pd++] = before[pb++];
             }
-            while (pc < b2.Length)//配列bをすべて配列dに格納している＆配列cに未格納がある場合
+            while (pc < after.Length)//配列bをすべて配列dに格納している＆配列cに未格納がある場合
             {
-                b3[pd++] = b2[pc++];
+                f[pd++] = after[pc++];
             }
 
             //配列dの中身を表示
-            Console.WriteLine("配列b3");
-            for (int i = 0; i < b3.Length; i++)
+            Console.WriteLine("配列f");
+            for (int i = 0; i < f.Length; i++)
             {
-                Console.WriteLine("b3[{0}]:{1}", i, b3[i]);
+                Console.WriteLine("f[{0}]:{1}", i, f[i]);
             }
 
-            return b3;
+            return f;
         }
-        static int[] mergeafter(int[] c)
-        {
-            Console.WriteLine("配列を前半と後半に分割します。");
-            int half = c.Length / 2;
-            int[] c1 = new int[half];
-            int[] c2 = new int[half];
-
-            for (int i = 0; i < half; i++)
-            {
-                c1[i] = c[i];
-            }
-            //前半の中身を表示
-            Console.WriteLine("mergemerge前半");
-            for (int i = 0; i < c1.Length; i++)
-            {
-                Console.WriteLine("c1[{0}]:{1}", i, c1[i]);
-            }
-            if (c1.Length != 1)
-            {
-                mergeafter(c1);
-            }
-
-            int j = half;
-            for (int i = 0; i < half; i++)
-            {
-                c2[i] = c[j];
-                j++;
-            }
-            //後半の中身を表示
-            Console.WriteLine("mergemerge後半");
-            for (int i = 0; i < c2.Length; i++)
-            {
-                Console.WriteLine("c2[{0}]:{1}", i, c2[i]);
-            }
-
-            Console.WriteLine("前半配列b1と後半配列b2を配列b3にソートして格納します。");
-            int[] c3 = new int[c1.Length + c2.Length];
-            int pb = 0;
-            int pc = 0;
-            int pd = 0;
-
-            while (pb < c1.Length && pc < c2.Length)
-            {
-                c3[pd] = (c1[pb] <= c2[pc]) ? c1[pb] : c2[pc];
-                if (c1[pb] <= c2[pc])
-                {
-                    pb++;
-                }
-                else
-                {
-                    pc++;
-                }
-                pd++;
-            }
-
-            //比較対象のない残り物の格納
-            while (pb < c1.Length)//配列cをすべて配列dに格納している＆配列bに未格納がある場合
-            {
-                c3[pd++] = c1[pb++];
-            }
-            while (pc < c2.Length)//配列bをすべて配列dに格納している＆配列cに未格納がある場合
-            {
-                c3[pd++] = c2[pc++];
-            }
-
-            //配列c3の中身を表示
-            Console.WriteLine("配列c3");
-            for (int i = 0; i < c3.Length; i++)
-            {
-                Console.WriteLine("c3[{0}]:{1}", i, c3[i]);
-            }
-
-            return c3;
-        }
-        static void mergesort(int[] a,int[] b, int[] c, int half)
+        static void mergesort(int[] a,int[] b, int[] c,int[]d, int half, int afterMax)
         {
             
             for (int i = 0; i < half; i++)
@@ -171,11 +112,11 @@ namespace List6_14
             }
             if(b.Length != 1)
             {
-                b = mergebefore(b);
+                b = mergemerge(b);
             }
 
             int j = half;
-            for (int i = 0; i < half + 1; i++)
+            for (int i = 0; i < afterMax; i++)
             {
                 c[i] = a[j];
                 j++;
@@ -188,11 +129,10 @@ namespace List6_14
             }
             if (c.Length != 1)
             {
-                c = mergeafter(c);
+                c = mergemerge(c);
             }
 
             Console.WriteLine("前半配列bと後半配列cを配列dにソートして格納します。");
-            int[] d = new int[b.Length + c.Length];
             int pb = 0;
             int pc = 0;
             int pd = 0;
@@ -220,17 +160,10 @@ namespace List6_14
             {
                 d[pd++] = c[pc++];
             }
-
-            //配列dの中身を表示
-            Console.WriteLine("配列d");
-            for (int i = 0; i < d.Length; i++)
-            {
-                Console.WriteLine("d[{0}]:{1}", i,d[i]);
-            }
         }
         static void Main(string[] args)
         {
-            int[] a = { 22, 5, 11, 32, 120, 3, 70 };
+            int[] a = { 11, 22, 5, 32, 120, 3 };
 
             //配列aの中身を表示
             Console.WriteLine("配列a");
@@ -241,13 +174,28 @@ namespace List6_14
 
             Console.WriteLine("配列を前半と後半に分割します。");
             int half = a.Length / 2;
+            int afterMax;
+            if (a.Length % 2 == 1)//奇数
+            {
+                afterMax = half + 1;
+            }
+            else
+            {
+                afterMax = half;
+            }
             int[] b = new int[half];
-            int[] c = new int[half + 1];
+            int[] c = new int[afterMax];
+            int[] d = new int[b.Length + c.Length];
 
-            Console.WriteLine("昇順にソートします。");
-            mergesort(a,b,c,half);
+            mergesort(a,b,c,d,half, afterMax);
 
             Console.WriteLine("昇順にソートしました。");
+            //配列dの中身を表示
+            Console.WriteLine("配列d");
+            for (int i = 0; i < d.Length; i++)
+            {
+                Console.WriteLine("d[{0}]:{1}", i, d[i]);
+            }
 
             Console.ReadLine();
         }
